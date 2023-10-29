@@ -1,0 +1,11 @@
+document.write("<h5>Hello World </h5>")
+alert("hello World")
+ var anss=confirm("Do you want to continue ")
+ if(anss)
+ alert("you Entered YES")
+ else
+ alert("you Entered NO ")
+ var num1=prompt("Enter NO 1")
+ var num2=prompt("Enter NO 2")
+var ans=parseInt(num1)+parseInt(num2)
+ document.write(" Addidion "+ans)

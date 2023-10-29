@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <form action="/updateemployee" method="post">
+            Employee id :<input type="text" name="empid" id="empid" 
+            value="<%=emp.EMPNO%>" readonly><br>
+            Employee Name :<input type="text" name="ename" id="ename" value="<%=emp.ENAME%>"><br>
+            Employee Salary:<input type="text" name="sal" id="sal" value="<%=emp.SAL%>"><br>
+            <button type="submit" name="btn" id="btn" value="btn">Update Employee</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+const m2=require("./function")
+ var sum=m2.addition(34,35)
+var p=m2.permutation(5,2)
+console.log("Sum :"+sum)
+console.log("Permutaion :" +p)

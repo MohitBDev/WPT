@@ -1,0 +1,76 @@
+{"invoice_line_items": [
+    {
+      "client_matter_id": "Matter123",
+      "line_number": 1,
+      "type": "Service",
+      "date": "2023-10-01",
+      "quantity": 5,
+      "unit_cost": 100.00,
+      "tax_rate": 0.08,
+      "is_taxable": true,
+      "description": "Consulting Services"
+    },
+    {
+      "client_matter_id": "Matter456",
+      "line_number": 2,
+      "type": "Expense",
+      "date": "2023-10-02",
+      "quantity": 1,
+      "unit_cost": 50.00,
+      "tax_rate": null,
+      "is_taxable": false,
+      "description": "Travel Expense"
+    },
+    {
+      "client_matter_id": "Matter789",
+      "line_number": 3,
+      "type": "Service",
+      "date": "2023-10-03",
+      "quantity": 3,
+      "unit_cost": 75.00,
+      "tax_rate": 0.05,
+      "is_taxable": true,
+      "description": "Legal Services"
+    },
+    {
+      "client_matter_id": "Matter123",
+      "line_number": 4,
+      "type": "Expense",
+      "date": "2023-10-04",
+      "quantity": 2,
+      "unit_cost": 60.00,
+      "tax_rate": null,
+      "is_taxable": false,
+      "description": "Office Supplies"
+    },
+    {
+      "client_matter_id": "Matter456",
+      "line_number": 5,
+      "type": "Service",
+      "date": "2023-10-05",
+      "quantity": 4,
+      "unit_cost": 90.00,
+      "tax_rate": 0.1,
+      "is_taxable": true,
+      "description": "Marketing Services"
+    },
+    {
+      "client_matter_id": "Matter789",
+      "line_number": 6,
+      "type": "Expense",
+      "date": "2023-10-06",
+      "quantity": 3,
+      "unit_cost": 30.00,
+      "tax_rate": null,
+      "is_taxable": false,
+      "description": "Travel Expense"
+    }
+  ]
+}
+
+**Calculate the total cost for all line items of a specific client matter:**
+
+select client_matter_id,sum(i.uni_cost*Qty*ifnull(i.taxrate,0)) as totalcost
+from invoice-line_items  i
+group by  client_matter id 
+;

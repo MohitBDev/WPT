@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+    .cl{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #error{
+        color:rgb(205, 65, 65);
+        
+    }
+    
+   </style>
+    <title>Form</title>
+    <script src="../jquery.js"></script>
+    <script src="../javascript/login.js"></script>
+  
+</head>
+
+<body>
+    <div id="error" class="cl"></div>
+    <form  > 
+        <div class="cl">
+            <label for="nm">Username
+            </label><br>
+            <input type="text" id="nm" name="nm">
+        </div><br>
+        <div class="cl">
+            <label for="pass">Password
+            </label><br>
+            <input type="password" id="pass" name="pass"><br>
+          
+        </div>
+        <div class="cl">
+        <button type="button" id="btn" name="btn" >Submit</button>
+    </div>
+    </form>
+    
+</body>
+</html>

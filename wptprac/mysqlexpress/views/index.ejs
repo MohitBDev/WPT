@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+<head>
+   <title>Employees Data</title>
+</head>
+<body>
+    <header>Employees</header>
+    <form action="/empform">
+        <table border="2" >
+            <caption><h1>Employee Management </h1></caption>
+            <thead>
+                <tr>
+                    <th>Employee No</th>
+                    <th>Employee name</th>
+                    <th>JOB</th>
+                    <th>Manager No</th>
+                    <th>HireDate</th>
+                    <th>Salary</th>
+                    <th>Comm</th>
+                    <th>DEPT NO</th>
+                    <th>Action</th>
+
+
+                    
+                </tr>
+            </thead>
+            <tbody>
+            
+                
+                <%for(var i=0;i<empdata.length;i++){%>
+                    
+
+                    <tr>
+                        <td><%=empdata[i].EMPNO%></td>
+                        <td><%=empdata[i].ENAME%></td>
+                        <td><%=empdata[i].JOB%></td>
+                        <td><%=empdata[i].MGR%></td>
+                        <td><%=empdata[i].HIREDATE%></td>
+                        <td><%=empdata[i].SAL%></td>
+                        <td><%=empdata[i].COMM%></td>
+                        <td><%=empdata[i].DEPTNO%></td>
+                        <td> <a href="/update/<%=empdata[i].EMPNO%>" >Update</a> /   <a href="/delete/<%=empdata[i].EMPNO%>" >DELETE</a>                 </td>
+                    </tr>
+                  <%}%>
+
+
+
+                
+            </tbody>
+        </table><br>
+        <button type="submit" name="btn" id="btn" >Add Employee</button>
+        
+
+
+
+
+    </form>
+
+
+    
+</body>
+</html>

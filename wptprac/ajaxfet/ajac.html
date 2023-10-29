@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script src="../jquery.js"></script>
+        <script>
+            var display=(resp)=>{
+             
+                // var str="<table border='2'><tr><th>Id</th><th>title</th><th>title</th><th>body</th></tr>"
+                //     for(var ob of resp){
+                //         str+=`<tr><td>${ob.id}</td><td>${ob.title}</td><td>${ob.description}</td><td>${ob.price}</td></tr>`
+                //     } 
+                //     str+="</table>"
+                //     document.getElementById("mydiv").innerHTML=str;
+                    document.getElementById("mydiv").innerHTML= resp[0];
+                
+              
+
+            }
+        var p;
+             var  sendrequest=async ()=>{
+                // fetch("https://dummyjson.com/products").then((result)=>{ return result.json()}).then((data)=>{
+                //     console.log(data);
+                //   }).catch((err)=>{console.log(err)})
+               p= fetch("https://dummyjson.com/products")
+               p.then((result)=>{ return result.json()}).then((data)=>{
+                    console.log(data);
+                    display(data);
+                    
+                  }).catch((err)=>{console.log(err)})
+
+
+                 }
+           
+
+               
+                
+           
+        </script>
+
+    </head>
+    <body>
+        <button name="btn" id="btn"  onclick="sendrequest()">ajax</button>
+        <div id="mydiv"></div>
+
+        
+    </body>
+</html>

@@ -1,0 +1,7 @@
+
+list all employees who earn more than average sal of dept 10
+
+select * from emp where  sal>(select avg(e.sal) from emp e where e.deptno =10);
+
+list all employees who earn more than average sal of Alan's department 
+select *from emp where sal>(select avg(sal) from emp where deptno=(select deptno from emp where ename like 'allen'));

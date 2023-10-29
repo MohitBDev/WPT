@@ -1,0 +1,17 @@
+/* styles.css (or your CSS file) */
+
+/* CSS */
+.centered-container {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+    min-height: 100vh;       /* 100% of viewport height for vertical centering */
+}
+
+.login-box {
+    /* Your styling for the login box */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+}
